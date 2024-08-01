@@ -68,7 +68,7 @@ class Euclidean:
                 
 
 
-class TLNN:
+class kTLNN:
     def __init__(self, k, kb_factor=1.4):
         self.NN1st = []
         self.NN2nd = []
@@ -190,7 +190,7 @@ if __name__ == '__main__':
     # dividimos datos
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=2) #12
 
-    classifier = TLNN(k=11)
+    classifier = kTLNN(k=11)
     classifier.fit(X_train, y_train)
     preds = classifier.predict(X_test)
     print(f'Preds: {preds}')
