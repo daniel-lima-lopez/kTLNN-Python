@@ -1,5 +1,5 @@
 # kTLNN-Python
-This is python implemetation of the Two-Layer Nearest Neighbor classifier proposed by Wang at al. (CITAR)
+This is python implemetation of the Two-Layer Nearest Neighbor classifier proposed by [Wang et al.](https://www.sciencedirect.com/science/article/abs/pii/S0950705121008662)
 
 ## Classifier description
 The operation of the classifier is divided into three stages, given a query point $x$:
