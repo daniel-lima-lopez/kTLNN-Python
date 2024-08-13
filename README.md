@@ -1,18 +1,18 @@
 # kTLNN-Python
-This is python implemetation of the Two-Layer Nearest Neighbor classifier proposed by [Wang et al.](https://www.sciencedirect.com/science/article/abs/pii/S0950705121008662)
+This is a python implementation of the Two-Layer Nearest Neighbor classifier proposed by [Wang et al.](https://www.sciencedirect.com/science/article/abs/pii/S0950705121008662)
 
 ## Classifier description
 The operation of the classifier is divided into three stages, given a query point $x$:
-1. The first layers is built by the $k$ nearest neighbors of $x$. Then the second layer is formed by the $k$ nearest neighbors of each point in the first layer.
+1. The first layer is built by the $k$ nearest neighbors of $x$. Then the second layer is formed by the $k$ nearest neighbors of each point in the first layer.
 2. Considering the distribution of the query with the second layer points, the extended neighborhood is built with the most salient points in the first and second layer.
-3. The final neighborhood is formed by the points in the extended neighbothood which contain $x$ among ther $k_b$ nearest neighbors (backward nearest neighbor relation). The final votation to decide the $x$ class is performed on this neighborhood.
+3. The final neighborhood is formed by the points in the extended neighborhood which contain $x$ among their $k_b$ nearest neighbors (backward nearest neighbor relation). The final vote to decide the $x$ class is performed on this neighborhood.
 
-## Instalation
+## Installation
 Clone this repository
 ```bash
 git clone git@github.com:daniel-lima-lopez/kTLNN-Python.git
 ```
-move to instalation directory:
+move to installation directory:
 ```bash
 cd kTLNN-Python
 ```
@@ -50,9 +50,10 @@ print(f'accuracy: {accuracy_score(y_true=y_test, y_pred=preds)}')
 ```
 
 ## Experiments
-Experiments were performed with the datasets: balance-scale, bands and wine. On each experiments, a 10-fold cross validation was applied considering the `k` values 1, 3, 5, 7, 9 and 11. The accuracy on each experiment is presented in the following figures:
-![Experiment balance-scale](imgs/ks_balance-scale.png)
+Experiments were performed with the datasets: balance-scale, bands and wine. On each experiment, a 10-fold cross validation was applied considering the `k` values 1, 3, 5, 7, 9 and 11. The accuracy on each experiment is presented in the following figures:
 
-![Experiment bands](imgs/ks_bands.png)
+<img src="imgs/ks_balance-scale.png" alt="drawing" width="500"/>
 
-![Experiment wine](imgs/ks_wine.png)
+<img src="imgs/ks_bands.png" alt="drawing" width="500"/>
+
+<img src="imgs/ks_wine.png" alt="drawing" width="500"/>
